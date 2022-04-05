@@ -2,10 +2,6 @@ class Tape(object):
     blank_symbol = " "
     def __init__(self, tape_string = ""):
         self.tape = dict((enumerate(tape_string)))
-        # last line is equivalent to the following three lines:
-        #self.__tape = {}
-        #for i in range(len(tape_string)):
-        #    self.__tape[i] = input[i]
         
     def __str__(self):
         s = ""
@@ -82,5 +78,5 @@ print("Input on Tape:\n" + t.get_tape())
 while not t.final():
     t.step()
 
-print("Result of the Turing machine calculation:")    
+print("Turing Machine Result:")    
 print(t.get_tape())
